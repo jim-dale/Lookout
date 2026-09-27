@@ -32,6 +32,9 @@ internal class Program
         builder.Services
             .AddOptions<ExportAttachmentsOptions>()
             .BindConfiguration("ExportAttachments");
+        builder.Services
+            .AddOptions<ListContactsOptions>()
+            .BindConfiguration("ListContacts");
 
         builder.Services.AddSingleton<OutlookService>();
         builder.Services.AddSingleton<SinkFactory>();
